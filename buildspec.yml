@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - apt-get update
+  build:
+    commands:
+       - mvn package
+artifacts:
+  files:
+    - target/petclinic.war
+  discard-paths: yes
